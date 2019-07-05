@@ -1,0 +1,504 @@
+@charset "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,a,span{ margin: 0; padding: 0;}
+img{ border:0; vertical-align:middle;}
+ul,li{list-style:none;}
+button,input,textarea{outline:none;border: none;}
+textarea{resize: none;}
+body{font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;color:#666;background: #f9f9f9;min-width:1345px;}
+a{text-decoration:none;}
+a:hover{color: #f12020}
+.clearfix{*zoom:1;} /* 针对IE7 hack，触发IE7的haslayout，以清除浮动 */
+.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+.lf{float: left;}
+.rt{float: right;}
+.com-width{ width: 1226px; margin: 0 auto;}
+
+
+/*头部工具栏*/
+.toolbar{
+	height: 35px;
+	background: #333333;
+}
+.toolbar-left li a{
+	display: block;
+	height: 35px;
+	width: 145px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 13px;
+	line-height: 35px
+}
+.toolbar-left li .cur{
+	background: #555555;
+}
+.toolbar-left li a:hover{
+	background: #555555;
+}
+.toolbar-left li{
+	float: left;
+}
+.toolbar-left{
+	overflow: hidden;
+	height: 35px;
+	float: left;
+}
+.toolbar-login a{
+	font-size: 12px;
+	color: #ffffff;
+}
+.toolbar-login span{
+	font-size: 12px;
+	color: #ffffff;
+	margin: 0px 12px;
+}
+.toolbar-login{
+	line-height: 35px;
+	float: left;
+	height: 35px;
+}
+.tool-container{
+	width: 130px;
+	float: left;
+	height: 35px;
+	position: relative;
+}
+.tool-container:hover .tool-container-tips{
+	display: block;
+}
+.tool-container-tips{
+	display: none;
+	position: absolute;
+	width: 315px;
+	top: 100%;
+	right: 0px;
+	background: #ffffff;
+	z-index: 500;
+	box-shadow: 0px 0px 2px 0px #e1e0e0;
+}
+.tool-tips-row{
+	margin: 0px 28px;
+}
+.tool-shoppingCar-container:hover{
+	background: #5e5e5e;
+}
+.toolbar-mytool .tool-container-row a{
+	height: 18px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left: 25px;
+	display: block;
+	font-size: 12px;
+	margin-top: 9px;
+}
+.toolbar-mytool{
+	float: left;
+	width: 390px;
+	margin-left: 12px;
+}
+.tool-myCQ{
+	background: url(home-toolbar-login_03.png) no-repeat left center;
+	margin-left: 22px;
+}
+.tool-news{
+	background: url(home-toolbar-news_05.png) no-repeat left center;
+	*width: 51px;
+	margin-right: 22px;
+	margin-left: 16px;
+}
+.tool-shoppingCar{
+	background: url(home-toolbar-shoppingcar_03.png) no-repeat left center;
+	*width: 68px;
+	margin-left: 15px;
+	margin-right: 8px;
+}
+.toolbar-mytool .tool-container-row a b{
+	font-weight: normal;
+	font-size: 12px;
+	float: right;
+	display: block;
+	line-height: 17px;
+	margin-left: 4px;
+}
+.toolbar-mytool .tool-container-row a span{
+	display: block;
+	padding: 0px 6px;
+	font-size: 12px;
+	border-radius: 6px;
+	line-height: 13px;
+	height: 14px;
+	float: right;
+	margin-top: 3px;
+	background: #e42121;
+	margin-left: 5px;
+}
+.toolbar-right{
+	float: right;
+}
+
+.toolbar-login a:hover{
+	/*color:#f12020;*/
+}
+
+
+/*脚部*/
+.help-about{
+	padding: 37px 25px 0px;
+	height: 77px;
+	border-bottom: 1px solid #dddddd;
+}
+.about-icon img{
+	display: block;
+}
+.about-icon{
+	float: left;
+}
+.about-describe{
+	margin-left: 70px;
+}
+.about-describe h1{
+	font-size: 18px;
+	color: #333333;
+	line-height: 18px;
+}
+.about-describe p{
+	font-size: 14px;
+	line-height: 14px;
+	color: #999;
+	margin-top: 10px;
+}
+.about-CQ-center{
+	width: 236px;
+	margin: 0px auto;
+}
+.help-server{
+	padding-top: 4px;
+	width: 235px;
+}
+.help-server ul li a{
+	font-size: 12px;
+	color: #999;
+}
+.help-server ul li{
+	line-height: 30px;
+	height: 30px;
+}
+.help-server ul li.help-title{
+	line-height: 16px;
+	height: 16px;
+	margin-bottom: 18px;
+}
+.help-server ul li.help-title{
+	font-size: 16px;
+	color: #333333;
+	font-weight: 500;
+}
+.help-team{
+	width: 256px;
+	margin-left: 108px;
+}
+.help-team .clearfix{*height: 100px;}
+.foot-shopping{
+	border-top: 1px solid #cccccc;
+	margin-top: 14px;
+	padding-top: 14px;
+}
+.foot-shopping p{
+	line-height: 30px;
+}
+.foot-shopping p a{
+	font-size: 16px;
+	color: #333333;
+	line-height: 30px;
+	font-weight: 500;
+}
+.help-tel{
+	height: 147px;
+	border-left: 1px solid #cccccc;
+	width: 228px;
+	padding-top: 4px;
+	margin-left: 82px;
+}
+.help-tel h1{
+	font-size: 20px;
+	font-weight: 500;
+	color: #333333;
+	text-align: center;
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+.help-tel p{
+	margin-left: 45px;
+	padding-left: 43px;
+	height: 20px;
+	line-height: 20px;
+}
+.help-tel p a{
+	font-size: 14px;
+	color: #666666;
+}
+
+.help-tel p a:hover{
+	color:#f12020;
+}
+
+.airlines{
+	background: url(Customer-service_12.png) no-repeat left center;
+	margin-top: 6px;
+}
+.feedback{
+	background: url(feedback_17.png) no-repeat left center;
+	margin-top: 13px;
+}
+.help-code-box img{
+	display: block;
+}
+.help-code-box p{
+	font-size: 14px;
+	color: #333333;
+	line-height: 32px;
+	text-align: center;
+}
+.help-code{
+	float: right;
+	padding: 4px 22px 0px;
+	height: 147px;
+	width: 240px;
+	border-left: 1px solid #cccccc;
+}
+.help-ways{
+	margin-top: 20px;
+	padding-left: 25px;
+}
+
+.help-ways a:hover{
+	color:#f12020;
+}
+
+.footer-help{
+	height: 340px;
+}
+.footer{
+	background: #efefef;
+}
+.foot-statement{
+	height: 224px;
+	background: #333333;
+}
+.foot-logo{
+	text-align: center;
+	height: 36px;
+	vertical-align: middle;
+	margin-bottom: 19px;
+	margin-top: 20px;
+}
+.foot-txt p{
+	text-align: center;
+	font-size: 12px;
+	line-height: 24px;
+	color: #999999;
+}
+.foot-note p{
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	vertical-align:middle;
+	font-size: 12px;
+	color: #999999;
+}
+.foot-note p img{
+	margin-right: 10px;
+}
+.foot-note{
+	overflow: hidden;
+	margin-top: 24px;
+}
+.header-logo img{
+	display: block;
+}
+.header-logo{
+	float: left;
+	height: 78px;
+}
+.header-nav{
+	height: 78px;
+}
+.header-nav-shadow{
+	-webkit-box-shadow: 0px 3px 3px 0px #e1e1e1;
+	-moz-box-shadow: 0px 3px 3px 0px #e1e1e1;
+	box-shadow: 0px 3px 3px 0px #e1e1e1;
+}
+/*2016.4.7*/
+.tool-tips-row p a{
+	font-size: 14px;
+	color: #333333;
+}
+.tool-tips-row p a:hover{
+	color: #f12020;
+}
+.tool-tips-row{
+	padding-top: 18px;
+	border-bottom: 1px solid #e8e8e8;
+	height: 94px;
+}
+.tool-tips-row p{
+	line-height: 25px;
+	height: 50px;
+	overflow: hidden;
+}
+.tool-tips-row h1{
+	font-weight: normal;
+	font-size: 12px;
+	color: #666666;
+	line-height: 24px;
+	margin-top: 5px;
+}
+.tool-tips-row h1 span{
+	font-size: 16px;
+	color: #eb1a21;
+	margin: 0px 6px;
+}
+.tool-tips-row h1 b{
+	margin-left: 15px;
+	font-weight: normal;
+}
+.tool-tips-row h1 a{
+	float: right;
+	color: #666666;
+}
+.tool-tips-row h1 .tool-goods-tips{
+	color: #e71d12;
+	margin-right: 17px;
+}
+.tool-goods-pay{
+	height: 46px;
+	background: #f2f2f2;
+	margin-top: -1px;
+}
+.goods-sold-out p a{
+	color: #9b9b9b;
+}
+.goods-sold-out h1{
+	color: #9b9b9b;
+}
+.goods-sold-out h1 a{
+	color: #9b9b9b;
+}
+.tool-car-infor{
+	padding: 5px 0px 5px 24px;
+	width: 166px;
+	float: left;
+}
+.tool-car-infor p{
+	font-size: 12px;
+	color: #666666;
+	line-height: 13px;
+}
+.tool-car-infor p span{
+	margin-right: 3px;
+}
+.tool-car-infor h1{
+	font-size: 14px;
+	color: #666666;
+	line-height: 18px;
+	margin-top: 4px;
+	font-weight: normal;
+}
+.tool-car-infor h1 span{
+	color: #eb1a21;
+	font-size: 16px;
+}
+.goods-pay-btn{
+	height: 46px;
+	margin-left: 190px;
+	color: #ffffff;
+	line-height: 46px;
+	text-align: center;
+	background: #e71d12;
+	display: block;
+}
+.goods-pay-btn:hover{
+	color: #ffffff;
+}
+/*新增*/
+.tool-shoppingCar-container:hover .tool-myCQ-tips{
+	display: block;
+
+}
+.tool-myCQ-tips{
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	z-index: 500;
+	width: 230px;
+	height: 225px;
+	background: #ffffff;
+	box-shadow: 0px 0px 2px 0px #e1e0e0;
+	display: none;
+}
+.tool-myCQ-infor{
+	padding-top: 18px;
+	padding-left: 25px;
+	overflow: hidden;
+}
+.tool-myCQ-infor img{
+	display: block;
+	float: left;
+}
+.tool-myCQ-infor p{
+	margin-left: 77px;
+}
+.tool-myCQ-infor p.tool-myCQ-infor-phone{
+	line-height: 16px;
+	height: 16px;
+	font-size: 16px;
+	color: #333333;
+	margin-top: 10px;
+	margin-bottom: 12px;
+	margin-left: 74px;
+}
+.tool-myCQ-infor p.tool-myCQ-infor-setting{
+	line-height: 13px;
+	height: 13px;
+	font-size: 13px;
+	color: #666666;
+
+}
+.tool-myCQ-operation{
+	padding: 0px 16px 0px 25px;
+	line-height: 30px;
+	float: left;
+	margin-top: 5px;
+}
+.tool-myCQ-operation a{
+	font-size: 13px;
+	color: #666666;
+}
+.tool-myCQ-operation a:hover{
+	color: #f12020;
+}
+.tool-myCQ-operation span{
+	font-size: 12px;
+	color: #cfcfcf;
+	margin: 0px 29px;
+}
+.tool-container-tips-warp{
+	max-height: 339px;
+	overflow: auto;
+}
+h1.tips-nogoods{
+	padding: 15px 0px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #666666;
+	text-align: center;
+	font-weight: normal;
+}
+input,a,button{
+   font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif !important;
+}
+
+.car-sum-price{
+	position: fixed;
+	left:0px;
+	bottom:0px;}
