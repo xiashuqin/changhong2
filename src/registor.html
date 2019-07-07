@@ -119,25 +119,28 @@
             <input name="ecKey" type="hidden" value="">
             <input name="service" type="hidden" value="http://cn.changhong.com">
             <div class="new-register-row">
-                <p class="new-register-label">手机号码</p>
-                <input name="phone" maxlength="11" type="text" class="new-login-account" placeholder="请输入手机号" />
-                <span for="phone" generated="true" class="new-register-error">请输入手机号</span>
+                <p class="new-register-label telp">手机号码</p>
+                <input name="phone" maxlength="11" type="text" class="new-login-account telnum" placeholder="请输入手机号" />
+                <span class="regist-success regist-success-tel" style="width:40px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span for="phone" generated="true" class="new-register-error telzi">请输入手机号</span>
             </div>
             <div class="new-register-row">
-                <p class="new-register-label">设置密码</p>
-                <input name="password" id="confirm-pwd" autocomplete="off" type="password" class="new-login-password"
-                    placeholder="请输入密码" />
-                <!-- <span for="phone" generated="true" class="new-register-error">请设置密码</span> -->
+                <p class="new-register-label passp">设置密码</p>
+                <input name="password" id="confirm-pwd" autocomplete="off" type="password"
+                    class="new-login-password passnum" placeholder="请输入密码" />
+                <span class="regist-success regist-success-pass" style="width:40px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span for="phone" generated="true" class="new-register-error passwdzi">请设置密码</span>
                 <p class="registered-pw-tips">长度在8~16之间，必须包含字母和数字</p>
             </div>
             <div class="new-register-row">
-                <p class="new-register-label">确认密码</p>
-                <input name="checkpwd" autocomplete="off" type="password" class="new-login-password"
+                <p class="new-register-label surep">确认密码</p>
+                <input name="checkpwd" autocomplete="off" type="password" class="new-login-password surepassnum"
                     placeholder="请输入密码" />
-                <span for="phone" generated="true" class="new-register-error">请确认密码</span>
+                <span class="regist-success regist-success-surepass" style="width:40px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span for="phone" generated="true" class="new-register-error surepasszi">请确认密码</span>
             </div>
             <div class="new-register-row">
-                <p class="new-register-label">图形验证</p>
+                <p class="new-register-label picp">图形验证</p>
                 <div class="new-register-validation" style="display: flex;" id="img-parent">
                     <input id="registCode" style="width: 170px;float: left" name="code" maxlength="4" type="text"
                         class="ignore" placeholder="请输入4位验证码" />
@@ -151,15 +154,6 @@
             <input type="hidden" id="imgCodeUrl" value="../verification.do">
             <input type="hidden" id="sendCodeUrl" value="retrieve/sendCode.do">
             <input type="hidden" id="authCodeUrl" value="retrieve/verification.do">
-            <!-- <div class="new-register-row" id="sms-group">
-                <p class="new-register-label">短信验证</p>
-                <div class="new-register-validation" id="sms-code">
-                    <input class="ignore" style="width: 172px;height: 40px;" type="text" name="authCode" maxlength="6"
-                        placeholder="请输入短信验证码" />
-                    <p class="register-validation-message">获取验证码</p>
-                </div>
-            </div> -->
-            <!-- <p class="new-register-number">每个手机号每天只能获取五次验证码</p> -->
             <div class="new-register-agreement">
                 <input type="checkbox" id="checkbox" checked="checked" />
                 <p class="register-agreement-content" style="width: 350px;">我已阅读并接受 <a href="#">版权声明</a> 和 <a
@@ -167,11 +161,13 @@
                 <span id="checkbox-tips" style="width:350px;clear: both;">请阅读并接受 版权声明 和 隐私保护 条款</span>
             </div>
             <input type="submit" class="new-login-singIn new-register-btn" value="注册" />
-            <p class="new-registerTo-login"><a href="#">已有账号，马上登录</a>
+            <p class="new-registerTo-login"><a href="login.html">已有账号，马上登录</a>
             </p>
         </div>
     </form>
     <!-- 注册部分结束 -->
+    <script src="script/js/jquery.js"></script>
+    <script src="script/js/registor.js"></script>
 </body>
 
 </html>

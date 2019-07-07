@@ -170,7 +170,7 @@
     padding-left: 28px;
     font-size: 14px;
     margin-left: 5px;
-    display: block;
+    display: none;
     background: url("../img/signed-error-icon.png") no-repeat left center;
     color:#e42121 ;
 }
@@ -184,13 +184,21 @@
 .regist-success{
 	color: #43842b;
 	background: url("../img/signed-right-icon.png") no-repeat right center;
-	margin-left: 8px;
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: none;
 }
 
 .password-success{
 	color: #43842b;
 	background: url("../img/signed-right-icon.png") no-repeat right center;
-	margin-left: 8px;
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: none;
 }
 .registered-login{
     line-height: 38px;
