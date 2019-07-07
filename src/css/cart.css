@@ -1,0 +1,110 @@
+/*  支付流程跟踪导航开始  */
+.car-header{margin:24px 0 0 257px;overflow: hidden;}
+.reg-sp{display: block;float: left;padding-left: 17px;height: 24px;line-height: 24px;border-left: 1px solid #cccccc;font-size: 24px;color: #666666;}
+.car-step{float: right;}
+.car-step-num{float: left;font-size:18px;color:#666666;line-height: 30px;}
+.car-step-num span{display: block;float: left;width:30px;height: 30px;background:url("../img/ok-icon04.png") no-repeat;margin-right:8px;font-size: 20px;color: #afafaf;line-height: 28px;text-align: center;}
+.car-step p{float: left;width:130px;border-top: 4px solid #cccccc;margin: 14px 15px 0;}
+.car-cur-step{color: #4dbd62;}
+.car-cur-step span{background: url("../img/ok-icon03.png") no-repeat;color: #fff;}
+.car-ok-step{color: #4dbd62;}
+.car-ok-step span{width:30px;height:30px;border:none;background: url("../img/ok-icon04.png") no-repeat center;content: "";}
+.car-ok-step + p {border-top: 4px solid #4dbd62;}
+
+.car-step-num{
+    font-size: 14px;
+}
+
+/*  支付流程跟踪导航结束 */
+
+.car-main-container{background: #f7f7f7;overflow: hidden;}
+.car-con-top{padding-top: 5px;font-size: 14px;color: #333;line-height: 66px;}
+.car-con-top p.car-lf-sp{float: left;margin-left: 5px;}
+.car-lf-sp span{color: #f12020;margin: 0 4px;}
+.car-con-top p.rt-sp{float: right;padding-left: 15px;margin-right:15px;background: url("../../images/memberHome/car-icon01.png") no-repeat left center;}
+.active{background-color:#F58718; font-size:12px; color:#FFF; padding:5px; margin-left: 3px}
+.my-car-bk{margin-bottom:23px;overflow: hidden;}
+.car-item-deal{background: #fff;margin-bottom:10px;overflow: hidden;}
+.car-check-box{cursor:pointer;float: left;width:14px;height: 14px;margin:72px 0 0 16px;background: url("../img/pro-sel-bac01.png") no-repeat;}
+.car-check-box input{float: left;width:14px;height: 14px;opacity: 0;filter:alpha(opacity=0);cursor: pointer;}
+.car-checked{background: url(../img/pro-sel-bac01.png) no-repeat!important;}
+.car-deal-rt{margin-left: 50px;border-left: 1px solid #f7f7f7;}
+.car-deal-top{border-bottom: 1px solid #f7f7f7;height: 42px;line-height: 42px;font-size: 14px;color: #666666;}
+.car-sp-lf{float: left;}
+.car-deal-top p{float: left;margin-left: 19px;padding-left:10px;margin-top: 2px;}
+.car-deal-top p span{color: #f12020;}
+.car-all-check{cursor:pointer;float: left;width:14px;height: 14px;margin:25px 18px 0 15px;background: url("../../images/memberHome/pro-sel-bac01.png") no-repeat;}
+.car-all-check input{float: left;width:14px;height: 14px;opacity: 0;filter:alpha(opacity=0);cursor: pointer;}
+
+.car-all-check1{cursor:pointer;float: left;width:14px;height: 14px;margin:25px 18px 0 15px;background: url("../../images/memberHome/pro-sel-bac01.png") no-repeat;}
+.car-all-check1 input{float: left;width:14px;height: 14px;opacity: 0;filter:alpha(opacity=0);cursor: pointer;}
+.car-opt-bk{float:right;margin-top: 8px;}
+.car-opt-bk .opt-like{display:block;float:left;width:24px;height: 22px;margin:0 22px 0 6px;background: url("../img/car-icon06.png") no-repeat;}
+.car-opt-bk .opt-del{display:block;float:left;width:24px;height: 24px;margin:0 22px 0 6px;background: url("../img/car-icon07.png") no-repeat;}
+.car-opt-bk .opt-like:hover{background: url("../img/car-icon06.png") no-repeat;}
+.car-opt-bk .like-done{background: url("../../images/memberHome/car-icon05.png") no-repeat;}
+.car-deal-sp{height: 112px;padding:5px 0px}
+.car-deal-pc {  display: block;  float: left;  width: 110px;  height: 110px;  margin-left: 10px;  }
+.car-deal-pc img {  display: block;  width: 110px;  height: 110px;  }
+.car-deal-name{float: left;margin-left:13px;width:400px;}
+.car-deal-name .h3 {  color: rgb(51, 51, 51);  display: table-cell;  vertical-align: middle;  height: 110px;  }
+.car-deal-name p{font-size: 16px;color: #333;line-height: 30px;height: 56px;}
+.car-deal-name p span{margin-right: 35px;}
+.car-deal-price {  float: left;  margin-left: 25px;  width: 190px; }
+
+
+p.del-price{font-size: 14px;color: #909090;margin-top: 18px;height: 14px;line-height: 14px;text-align: center;text-decoration:line-through;}
+p.now-price{font-size: 18px;color: #000;height:42px;line-height: 42px;text-align: center;}
+p.rec-price {  font-size: 12px;  color: #999;  height: 14px;  line-height: 14px;  text-align: center;  }
+p.now-price span{color: #eb1a21;margin:0 22px;}
+p.rec-price  i{font-style:normal;color: #eb1a21;}
+p.rec-price  span.rec-sp2{color: #eb1a21;}
+.car-deal-qt{float:left;width:225px;height: 35px;margin: 38px 0 0 30px;overflow: hidden;}
+
+.car-deal-qt label{display: block;float: left;width: 50px;font-size: 18px;color: #000;line-height: 35px;}
+.car-quantity-form{float: left;border: 1px solid #cccccc;width:173px;height: 33px;}
+.car-quantity-form a{display: block;width:47px;height: 33px;line-height: 27px;color:#bbbbbb;font-size:28px;font-weight:bold;text-align: center;}
+.car-quantity-form a.decrement{float: left;background: url("../img/subtract-icon.jpg") no-repeat center center;}
+.car-quantity-form a.increment{float: right;background: url("../img/add-icon.png") no-repeat center center;}
+
+.car-quantity-form input{display:block;float:left;padding:0 1px;width:75px;height: 33px;line-height: 33px;border-left:  1px solid #cccccc;border-right:  1px solid #cccccc;color: #000;font-size: 16px;text-align: center;font-family: "Microsoft YaHei","微软雅黑","Arial",sans-serif;}
+.car-item-sta{float: right;width:120px;font-size: 18px;color: #000;line-height: 112px;text-align: center;}
+
+/* 全选部分开始 */
+.car-all-check {
+    cursor: pointer;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 25px 18px 0 15px;
+    background: url(../img/pro-sel-bac01.png) no-repeat;
+}
+/* 全选部分结束 */
+
+
+/* 结算部分开始 */
+
+.car-sum-price{
+    width:100%;height: 100px;background: #313131;
+     box-shadow: 0px 0px 3px 0px #fff;
+    border-top: 2px solid #fff;
+}
+    .car-pro-count{float: left;margin-left:5px;font-size: 14px;color: #fff;line-height: 100px;}
+    .car-pro-count span{font-size: 22px;color: #f12020;margin: 0 16px;}
+    .car-pro-int{float: left;font-size: 14px;color: #fff;line-height: 100px;}
+    .sum-pro-lf i{display:block;float:left;margin:42px 27px 0 47px;font-style: normal;border-left: 2px solid #acacac;height: 16px;}
+    .sum-pro-rt{float: right;}
+    .sum-price{float: left;font-size: 14px;color: #fff;line-height: 100px;}
+    .sum-price span{font-size: 16px;color: #f12020;margin:0 17px;}
+    .car-pay-btn{display: block;float: left;margin:30px 14px 0 66px;width:200px;height: 40px;line-height: 40px;background: #f12020;font-size: 14px;color: #fff;
+        font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;cursor: pointer;}
+    .car-invalid-item .car-deal-top p,
+    .car-invalid-item .car-deal-name .h3,
+    .car-invalid-item .car-deal-name p,
+    .car-invalid-item p.now-price,
+    .car-invalid-item .car-deal-qt label,
+    .car-invalid-item .car-quantity-form input,
+    .car-invalid-item .car-item-sta{color: #999999;}
+    .car-invalid-item p.now-price span{color: #fd999c;}
+    .car-invalid-item .car-deal-pc img{opacity: 0.8;filter:alpha(opacity=80);}
+/* 结算部分结束 */

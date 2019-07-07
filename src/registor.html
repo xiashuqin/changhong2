@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/registor.css">
+</head>
+
+<body>
+
+    <!-- 头部导航开始 -->
+    <div class="toolbar">
+        <!--这个宽度限制导致右侧内容换行出不来，先注释-->
+        <!--<div class="com-width">-->
+        <div class="toolbar-container">
+            <div class="toolbar-left">
+                <ul>
+                    <li><a href='#' class="cur">长虹官网</a></li>
+                    <li><a href='#' target="_blank">关于长虹</a></li>
+                    <li><a href='#' target="_blank">商务合作</a></li>
+                    <li><a href="#" target="_blank"><img src="img/en_icon.png" />&nbsp;&nbsp;English</a></li>
+                </ul>
+            </div>
+            <div class="toolbar-right">
+                <div class="toolbar-login" id="unLoginDiv">
+                    <a href="javascript:;" id="sso_login">登录</a>
+                    <span>|</span>
+                    <a href="#" target="_blank">注册</a>
+                </div>
+                <div class="toolbar-login" style="display: none" id="hasLoginDiv">
+                    <a href="javascript:;" class="user-account" id="user-account"></a>
+                    <a href="javascript:;" id="sso_logout">退出</a>
+                </div>
+                <div class="toolbar-mytool">
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href='#' class="tool-myCQ" target="_blank">我的长虹</a>
+                        </div>
+                        <div class="tool-myCQ-tips">
+                            <div class="tool-myCQ-infor">
+                                <img src="img/tool-myCQ-my-photo_03.jpg" alt="" width="60" height="60"
+                                    id="user_image" />
+                                <p class="tool-myCQ-infor-phone"
+                                    style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 5px;">
+                                    <a href="javascript:gotoLogin();" id="login_account">您好请登录</a></p>
+                                <p class="tool-myCQ-infor-setting"><a href="#">账户设置</a>
+                                </p>
+                            </div>
+                            <div class="tool-myCQ-operation">
+                                <a href="#">我的订单</a>
+                                <span>|</span>
+                                <a href="#">我的预约</a>
+                                <div class="tool-myCQ-operation-cut"></div>
+                                <a href="#">家电管家</a>
+                                <span>|</span>
+                                <a href="#">服务记录</a>
+                                <div class="tool-myCQ-operation-cut"></div>
+                                <a href="#">我的积分</a>
+                                <span>|</span>
+
+                                <div class="tool-myCQ-operation-cut"></div>
+                                <a href="#">我的收藏</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row hcyp-ewm-container">
+                            <a href='#' target="_blank" class="tool-news">虹创有品</a>
+                            <img class="hcyp-ewm-img" src="img/cnhome-hcyp-ewm.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href="#" class="tool-shoppingCar"><span id="mycartNum"
+                                    style="display:none;"></span>购物车</a>
+                        </div>
+                        <div class="tool-container-tips">
+                            <div class="tool-container-tips-warp">
+                            </div>
+                            <div class="tool-goods-pay" style="display: none">
+                                <div class="tool-car-infor">
+                                    <p><span id="totalNum">0</span>件商品</p>
+                                    <h1>总价：<span id="totalPrice"></span></h1>
+                                </div>
+                                <a href="javascript:;" class="goods-pay-btn" id="goods-pay-btn">立即结算</a>
+                            </div>
+                            <h1 class="tips-nogoods" style="display:none">
+                                购物车中还没有商品，赶紧选购吧
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 头部导航结束 -->
+
+    <!-- 头部logo部分开始 -->
+    <div class="header-nav header-nav-shadow">
+        <div class="banxin" style="overflow: hidden;">
+            <div class="header-logo">
+                <a href="/"><img src="img/header-logo_07.png" alt="" width="239" height="78" /></a>
+            </div>
+            <p class="head-login">注册</p>
+        </div>
+    </div>
+    <!-- 头部LOGO部分结束 -->
+
+    <!-- 注册部分开始 -->
+    <form action="registerByPhone.do" method="post" class="register_form" name="my_form">
+        <div class="new-register-main" style="width: 350px;">
+            <input name="livemode" type="hidden" value="1">
+            <input name="ecKey" type="hidden" value="">
+            <input name="service" type="hidden" value="http://cn.changhong.com">
+            <div class="new-register-row">
+                <p class="new-register-label">手机号码</p>
+                <input name="phone" maxlength="11" type="text" class="new-login-account" placeholder="请输入手机号" />
+                <span for="phone" generated="true" class="new-register-error">请输入手机号</span>
+            </div>
+            <div class="new-register-row">
+                <p class="new-register-label">设置密码</p>
+                <input name="password" id="confirm-pwd" autocomplete="off" type="password" class="new-login-password"
+                    placeholder="请输入密码" />
+                <!-- <span for="phone" generated="true" class="new-register-error">请设置密码</span> -->
+                <p class="registered-pw-tips">长度在8~16之间，必须包含字母和数字</p>
+            </div>
+            <div class="new-register-row">
+                <p class="new-register-label">确认密码</p>
+                <input name="checkpwd" autocomplete="off" type="password" class="new-login-password"
+                    placeholder="请输入密码" />
+                <span for="phone" generated="true" class="new-register-error">请确认密码</span>
+            </div>
+            <div class="new-register-row">
+                <p class="new-register-label">图形验证</p>
+                <div class="new-register-validation" style="display: flex;" id="img-parent">
+                    <input id="registCode" style="width: 170px;float: left" name="code" maxlength="4" type="text"
+                        class="ignore" placeholder="请输入4位验证码" />
+
+                    <img class="register-validation-pic" id="img" src="http://cn.changhong.com/sso/register_code.do"
+                        style="width: 90px;height: 40px;float: left" alt="" />
+                    <span class="validation-pic-change" onclick="" style="float: left">看不清 <br>换一张</span>
+                </div>
+                <span for="phone" generated="true" class="new-register-error">图形验证码不能为空</span>
+            </div>
+            <input type="hidden" id="imgCodeUrl" value="../verification.do">
+            <input type="hidden" id="sendCodeUrl" value="retrieve/sendCode.do">
+            <input type="hidden" id="authCodeUrl" value="retrieve/verification.do">
+            <!-- <div class="new-register-row" id="sms-group">
+                <p class="new-register-label">短信验证</p>
+                <div class="new-register-validation" id="sms-code">
+                    <input class="ignore" style="width: 172px;height: 40px;" type="text" name="authCode" maxlength="6"
+                        placeholder="请输入短信验证码" />
+                    <p class="register-validation-message">获取验证码</p>
+                </div>
+            </div> -->
+            <!-- <p class="new-register-number">每个手机号每天只能获取五次验证码</p> -->
+            <div class="new-register-agreement">
+                <input type="checkbox" id="checkbox" checked="checked" />
+                <p class="register-agreement-content" style="width: 350px;">我已阅读并接受 <a href="#">版权声明</a> 和 <a
+                        href="#">隐私保护</a> 条款</p>
+                <span id="checkbox-tips" style="width:350px;clear: both;">请阅读并接受 版权声明 和 隐私保护 条款</span>
+            </div>
+            <input type="submit" class="new-login-singIn new-register-btn" value="注册" />
+            <p class="new-registerTo-login"><a href="#">已有账号，马上登录</a>
+            </p>
+        </div>
+    </form>
+    <!-- 注册部分结束 -->
+</body>
+
+</html>

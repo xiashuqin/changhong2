@@ -1,0 +1,328 @@
+@charset "utf-8";
+.header-nav .head-reg{
+    font-size:24px;
+}
+
+.header-nav .head-login{
+    font-size:24px;
+}
+
+.re-password h3{
+    font-size:24px;
+}
+
+
+
+/*登录*/
+.new-login-body{
+    background: #f8f8f8;
+}
+.head-login{
+    font-size: 22px;
+    color: #333333;
+    margin-top: 26px;
+    line-height: 26px;
+    height: 26px;
+    margin-left: 20px;
+    border-left: 2px solid rgb(221, 221, 221);
+    padding-left: 15px;
+    float: left;
+}
+.new-login-main{
+    margin: 130px  auto 0px auto;
+    width: 320px;
+}
+.new-login-main input{
+    display: block;
+}
+.new-login-account,.new-login-password{
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    text-indent: 10px;
+    width: 318px;
+    line-height: 38px;
+    line-height: 38px\9;
+    color: #333333;
+    font-family: "Microsoft YaHei", "微软雅黑", "Arial", sans-serif;
+    font-size: 12px;
+}
+.new-login-account{
+    margin-bottom: 21px;
+}
+.new-login-password{
+    margin-bottom: 18px;
+}
+/* 修改 end 12-5*/
+.new-login-tips{
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 16px;
+    height: 16px;
+    color: #f12020;
+}
+.new-login-tips a{
+    color: #f12020;
+    text-decoration: underline;
+    float: right;
+    font-size: 14px;
+}
+/*修改 end*/
+.new-login-singIn{
+    width: 320px;
+    text-align: center;
+    background: #f12020;
+    height: 44px;
+    line-height: 44px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+.new-login-register{
+    font-size: 16px;
+    color: #333333;
+    width: 318px;
+    border: 1px solid #e2e2e2;
+    height: 42px;
+    background: #ffffff;
+    cursor: pointer;
+}
+.new-login-register:hover{
+    color: #f12020;
+    border: 1px solid #f12020;
+}
+.other-login-title{
+    height: 1px;
+    background: #d6d6d6;
+    margin-top: 58px;
+    position: relative;
+}
+.other-login-title p{
+    color: #d6d6d6;
+    width: 106px;
+    text-align: center;
+    line-height: 1;
+    background: #f8f8f8;
+    position: absolute;
+    left: 50%;
+    margin-left: -53px;
+    top: -7px;
+}
+.other-login-enter{
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 96px;
+}
+.other-login-enter img{
+    vertical-align: top;
+}
+.header-nav{
+    background: #ffffff;
+}
+
+/*新增*/
+.new-login-error{
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    float: left;
+    padding-left: 28px;
+    margin-left: 5px;
+    color: #e42121;
+    background: url("../../images/gw/images/signed-error-icon.png") no-repeat left center;
+}
+.new-register-main{
+    width: 320px;
+    margin: 66px auto 0px auto;
+}
+.new-register-row{
+    position: relative;
+    height: 78px;
+}
+.new-register-label{
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    position:absolute;
+    top: 0px;
+    left: -190px;
+}
+.new-register-tips{
+    height: 38px;
+    line-height: 38px;
+    padding-left: 28px;
+    font-size: 14px;
+    margin-left: 5px;
+    display: block;
+}
+.new-register-error{
+	height: 38px;
+    line-height: 38px;
+    padding-left: 28px;
+    font-size: 14px;
+    margin-left: 5px;
+    display: block;
+    background: url("../img/signed-error-icon.png") no-repeat left center;
+    color:#e42121 ;
+}
+.new-register-main input{
+    margin-bottom: 0px;
+}
+.new-register-right{
+    background: url("../img/signed-right-icon.png") no-repeat left center;
+    color: #43842b;
+}
+.regist-success{
+	color: #43842b;
+	background: url("../img/signed-right-icon.png") no-repeat right center;
+	margin-left: 8px;
+}
+
+.password-success{
+	color: #43842b;
+	background: url("../img/signed-right-icon.png") no-repeat right center;
+	margin-left: 8px;
+}
+.registered-login{
+    line-height: 38px;
+    height: 38px;
+    font-size: 14px;
+    color: #989898;
+    margin-left: 0px;
+}
+.registered-login a{
+    color: #e42121;
+    text-decoration: none;
+}
+.registered-pw-tips{
+    height: 38px;
+    line-height: 38px;
+    margin-left: 5px;
+    color: #989898;
+    font-size: 14px;
+}
+.new-register-validation input{
+    height: 38px;
+    width: 160px;
+    border: 1px solid #dedede;
+    text-indent: 10px;
+    font-size: 12px;
+    color: #333;
+}
+.register-validation-pic{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    margin-left: 6px;
+    vertical-align: top;
+}
+.validation-pic-change{
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+    display:block;
+    top: 0px;
+    left: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.register-validation-message{
+    height: 38px;
+    background: #ffffff;
+    width: 108px;
+    border: 1px solid #dedede;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+    color: #000;
+    font-size: 13px;
+    display: inline-block;
+    margin-left: 6px;
+}
+.register-validation-message:hover{
+    color: #f12020;
+    border: 1px solid #f12020;
+}
+.new-register-number{
+    height: 20px;
+    font-size: 14px;
+    color: #989898;
+}
+.new-register-agreement{
+    height: 48px;
+    margin-top: 8px;
+}
+
+.new-register-agreement input{
+    float: left;
+    cursor: pointer;
+    display: block;
+    margin-top: 9.5px;
+}
+.register-agreement-content{
+    
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    margin-left: 20px;
+}
+.register-agreement-content a{
+    color: #f12020;  }
+.register-agreement-content a:hover{
+    text-decoration: none;
+}
+.new-register-btn{
+    margin-top: 21px;
+}
+.new-registerTo-login{
+    line-height: 16px;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+.new-registerTo-login a{
+    color: #f12020;
+}
+.new-registerTo-login a:hover{
+    text-decoration: none;
+}
+.new-register-main{
+    padding-bottom: 66px;
+}
+.new-pw-back{
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+.new-pw-back a{
+    color: #999999;
+}
+.new-pw-back a:hover{
+    color: #f12020;
+}
+#checkbox-tips{
+	height: 38px;
+    line-height: 38px;
+    padding-left: 28px;
+    font-size: 14px;
+    margin-left: 5px;
+    display: none;
+    background: url("../img/signed-error-icon.png") no-repeat left center;
+    color:#e42121 ;
+}
