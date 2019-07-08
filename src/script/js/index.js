@@ -8,17 +8,27 @@
 		dataType: 'json'
 	}).done(function (picdata) {
 		$.each(picdata, function (index, value) {
+			// $str += `
+			// 		<li>
+			// 		<a href="details.html?sid=${value.picid}">
+			// 			<img src="${value.url}"
+			// 				alt="">
+			// 		</a>
+			// 		<h3>
+			// 			<a href="details.html?sid=${value.picid}">${value.title}</a>
+			// 		</h3>
+			// 		<p>${value.buchong}</p>
+			// 		<i>￥${value.price}</i>
+			// 	</li>`
+
 			$str += `
 					<li>
 					<a href="details.html?sid=${value.picid}">
-						<img src="${value.url}"
-							alt="">
+						<img src="${value.url}" alt="">
+						<h3>${value.title}</h3>
+						<p>${value.buchong}</p>
+						<i>￥${value.price}</i>
 					</a>
-					<h3>
-						<a href="#">${value.title}</a>
-					</h3>
-					<p>${value.buchong}</p>
-					<i>￥${value.price}</i>
 				</li>`
 		})
 		$ulstr.html($str);

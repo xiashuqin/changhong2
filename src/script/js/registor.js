@@ -85,6 +85,32 @@
     })
 
 
+    //验证码验证
+    // const $validation_pic_change = $('.validation-pic-change');//看不清楚换一张的span
+    // const $register_validation_pic = $('.register-validation-pic');//验证码图片
+    // $validation_pic_change.on('click', function () {
+    //     $register_validation_pic.attr('src', 'http://cn.changhong.com/sso/register_code.do');
+    //     console.log($register_validation_pic.val());
+    // })
+
+
+    //判断是否同意协议
+    const $checkbox = $('#checkbox');
+    var $agreen = true;
+    if ($checkbox.prop('checked')) {
+        $agreen = true;
+    } else {
+        $agreen = false;
+    }
+
+    //条件都满足submit提交按钮
+    const $new_register_btn = $('.new-register-btn');//提交注册按钮
+    $new_register_btn.click(function () {
+        if (!($tel && $passwd && $surepasswd && $agreen)) {
+            return false;
+        }
+    })
+
 }(jQuery)
 
 

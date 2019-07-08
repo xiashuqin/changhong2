@@ -113,7 +113,7 @@
     <!-- 头部LOGO部分结束 -->
 
     <!-- 注册部分开始 -->
-    <form action="registerByPhone.do" method="post" class="register_form" name="my_form">
+    <form action="http://localhost/changhong2/php/registor.php" method="post" class="register_form" name="my_form">
         <div class="new-register-main" style="width: 350px;">
             <input name="livemode" type="hidden" value="1">
             <input name="ecKey" type="hidden" value="">
@@ -139,7 +139,7 @@
                 <span class="regist-success regist-success-surepass" style="width:40px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span for="phone" generated="true" class="new-register-error surepasszi">请确认密码</span>
             </div>
-            <div class="new-register-row">
+            <!-- <div class="new-register-row">
                 <p class="new-register-label picp">图形验证</p>
                 <div class="new-register-validation" style="display: flex;" id="img-parent">
                     <input id="registCode" style="width: 170px;float: left" name="code" maxlength="4" type="text"
@@ -150,7 +150,7 @@
                     <span class="validation-pic-change" onclick="" style="float: left">看不清 <br>换一张</span>
                 </div>
                 <span for="phone" generated="true" class="new-register-error">图形验证码不能为空</span>
-            </div>
+            </div> -->
             <input type="hidden" id="imgCodeUrl" value="../verification.do">
             <input type="hidden" id="sendCodeUrl" value="retrieve/sendCode.do">
             <input type="hidden" id="authCodeUrl" value="retrieve/verification.do">
