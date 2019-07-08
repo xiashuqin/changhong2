@@ -17,5 +17,5 @@ if(isset($_POST['phone'])){
     $phone=$_POST['phone'];
     $password=sha1($_POST['password']);
     $conn->query("insert usertable values('$phone','$password')");
-    header('location:http://localhost/changhong2/src/login.html');//提交信息后立马跳转到登录页面
+    header('location:http://10.31.158.38/changhong2/src/login.html');//提交信息后立马跳转到登录页面
 }

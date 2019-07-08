@@ -5,7 +5,7 @@
     const $registerBtn = $('.registerBtn');
     $loginbtn.click(function () {
         $.ajax({
-            url: 'http://localhost/changhong2/php/login.php',
+            url: 'http://10.31.158.38/changhong2/php/login.php',
             type: 'post',
             data: {
                 usertel: $usertel.val(),
@@ -14,7 +14,7 @@
             dataType: 'json',
         }).done(function (d) {
             if (d) {
-                location.href = 'http://localhost/changhong2/src/index1.html';
+                location.href = 'http://10.31.158.38/changhong2/src/index1.html';
             } else {
                 alert('手机号或者密码错误');
                 $password.val('');
@@ -24,6 +24,6 @@
 
     //登录页面的注册按钮，点击跳转到注册页面
     $registerBtn.click(function () {
-        location.href = 'http://localhost/changhong2/src/registor.html';
+        location.href = 'http://10.31.158.38/changhong2/src/registor.html';
     })
 }(jQuery)

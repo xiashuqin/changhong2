@@ -4,7 +4,7 @@
 
 	// 主要图片数据(电视系列)
 	$.ajax({
-		url: 'http://localhost/changhong2/php/index1.php',
+		url: 'http://10.31.158.38/changhong2/php/index1.php',
 		dataType: 'json'
 	}).done(function (picdata) {
 		$.each(picdata, function (index, value) {
@@ -23,7 +23,7 @@
 
 			$str += `
 					<li>
-					<a href="details.html?sid=${value.picid}">
+					<a href="http://10.31.158.38/changhong2/src/details.html?sid=${value.picid}">
 						<img src="${value.url}" alt="">
 						<h3>${value.title}</h3>
 						<p>${value.buchong}</p>
@@ -122,17 +122,25 @@
 		//滚动时，获取大楼梯的top值，获取索引，给小楼梯对应的索引加active
 		$area.each(function (index, element) {
 			let $areatop = $area.eq(index).offset().top;
-			if ($areatop > $(window).scrollTop()) {
+			if ($areatop > $(window).scrollTop() - 400) {
 				$small.removeClass('clicked');
-				$small.eq(index).addClass('clicked');
+				$small.eq(index + 1).addClass('clicked');
 				return false;
 			}
+			if ($(window).scrollTop() < 400) {
+				var $firstli = $('.firstli');
+				$firstli.addClass('clicked').siblings().removeClass('clicked');
+			}
 		})
-
 	})
+
 	$small.on('click', function () {
+		let $tops;
 		$(this).addClass('clicked').siblings().removeClass('clicked');
-		let $tops = $area.eq($(this).index()).offset().top;
+		$tops = $area.eq($(this).index() - 1).offset().top;
+		if ($(this).index() == 0) {//点击热门时
+			$tops = 480;
+		}
 		$('html, body').animate({
 			scrollTop: $tops
 		})

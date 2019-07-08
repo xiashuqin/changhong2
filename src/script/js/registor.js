@@ -21,7 +21,7 @@
         if ($telnum.val() != '') {
             if ($reg.test($telnum.val())) {
                 $.ajax({
-                    url: 'http://localhost/changhong2/php/registor.php',
+                    url: 'http://10.31.158.38/changhong2/php/registor.php',
                     type: 'post',
                     data: {
                         tel: $telnum.val()

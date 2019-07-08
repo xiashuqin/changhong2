@@ -592,7 +592,7 @@ float:left;
 /* 楼梯侧面导航开始*/
 .xhome-fixl{
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 50%;
     margin-left: -670px;
     margin-top: -150px;

@@ -48,6 +48,7 @@
 .pro-ditem-cp img{
     display: block;
 }
+
 .pro-ditem-cp div.big-mirror{
     position: absolute;
     z-index: 99;
@@ -117,13 +118,13 @@
 .pro-ditem-pic a.pro-cur{
     border:1px solid #ed3c42;
 }
-/* .pro-ditem-pic div a.item-pre{
+.pro-ditem-pic div a.item-pre{
     display: block;
     float: left;
     margin-top:10px;
     width: 19px;
     height: 86px;
-    background: url(pro-ditem-pre_03.jpg) no-repeat left center;
+    background: url(../img/pro-ditem-pre_03.jpg) no-repeat left center;
 }
 .pro-ditem-pic div a.item-next{
     display: block;
@@ -131,8 +132,8 @@
     margin-top:10px;
     width: 19px;
     height: 86px;
-    background: url(pro-ditem-next_03.jpg) no-repeat right center;
-} */
+    background: url(../img/pro-ditem-next_03.jpg) no-repeat right center;
+}
 .pro-ditem-price{
     width: 650px;
     float: right;
