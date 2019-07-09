@@ -121,36 +121,42 @@
     //先判断是不是第一次加入购物车
     ; !function ($) {
         const $addcart = $('#pro-ditem-addin');
-        var $goodsid = location.search.substring(5);
-        let $sidarr = [];
-        let $goodsnumarr = [];
+        var sidarr = [];
+        var numarr = [];
+        const $goodsnumber = $('#count_value');
+        var $goodsid = location.search.substring(5);//当前商品的id
+        //存入存下物品的数量和编号
+        function cookietoarray() {
+            if ($.cookie('cookiesid') && $.cookie('cookienum')) {//判断商品是第一次存还是多次存储
+                sidarr = $.cookie('cookiesid').split(','); //cookie商品的sid  
+                numarr = $.cookie('cookienum').split(','); //cookie商品的num
+            }
+        }
 
         $addcart.click(function () {
             $addcart.attr({//跳转到另一个页面
                 href: 'http://10.31.158.38/changhong2/src/precart.html?sid=' + $goodsid
             });
+            cookietoarray();//获取存在的cookie里面的值
 
-            //存入存下物品的数量和编号
-            if ($.cookie('cookiesid') && $.cookie('cookienum')) {//存在cookie的话获取cookie的值
-                $sidarr = $.cookie('cookiesid').split(',');
-                $goodsnumarr = $.cookie('cookienum').split(',');
+            if ($.inArray($goodsid, sidarr) != -1) {//存在，商品不是第一次加入购物车，数量叠加
+                var num = parseInt(numarr[$.inArray($goodsid, sidarr)]) + parseInt($goodsnumber.val());
+                numarr[$.inArray($goodsid, sidarr)] = num;
+                $.cookie('cookienum', numarr.toString(), { expires: 90 }); //数组存入cookie
+
+            } else {//第一次加入购物车
+                sidarr.push($goodsid); //将当前的id存入数组
+                $.cookie('cookiesid', sidarr.toString(), { expires: 90 }); //数组存入cookie
+                numarr.push($goodsnumber.val());
+                $.cookie('cookienum', numarr.toString(), { expires: 90 }); //数组存入cookie
+
             }
-            //sidnum是字符串格式的，valuenum.value也是字符串格式的因为是文本框里面的内容
-            if ($sidarr.indexOf($goodsid) === -1) {//该商品是第一次加入购物车
-                $sidarr.push($goodsid);
-                $goodsnumarr.push(valuenum.value);
-                console.log($sidarr);
-                $.cookie('cookiesid', $sidarr.toString(), { expires: 90 });//存入cookie要以字符串存入
-                $.cookie('cookienum', $goodsnumarr.toString(), { expires: 90 });
-            } else {//该商品不是第一次加valuenum.value入购物车
-                let index = $sidarr.indexOf($goodsid);
-                let nownum = parseInt(valuenum.value) + parseInt($goodsnumarr[index]);
-                $goodsnumarr[index] = nownum;//把加起来的数量放回数组里面
-                $.cookie('cookienum', $goodsnumarr.toString(), { expires: 90 });
-            }
+            // console.log(sidarr);
+            // console.log(numarr);
 
         })
-    }(jQuery)
+
+    }(jQuery);
 
 
     //点击加入购物车按钮跳转到另一个页面
@@ -176,5 +182,4 @@
     //         })
     //     })
     // }(jQuery)
-
 
