@@ -117,6 +117,25 @@
     </div>
     <!-- 支付流程跟踪导航结束 -->
 
+    <!-- 删除商品提示框开始 -->
+    <div id="append_parent">
+        <div class="dialog_body" id="fwin_dialog" initialized="true"
+            style="position: fixed; z-index: 1701; left: 474.5px; top: 50%;">
+            <h3 class="dialog_head"><span class="dialog_title"><span class="dialog_title_icon">提示信息</span></span><span
+                    class="dialog_close_button" id="fwin_dialog_close" title="关闭">X</span></h3>
+            <div class="eject_con">
+                <div class="dialog_message_contents"><i class="alert_info"></i>确认删除吗?</div>
+            </div>
+            <div class="dialog_buttons_bar"><a href="javascript:void(0)" id="fwin_dialog_submit"
+                    class="dialog-bottom-btn dialog-bottom-btn mr10">确定</a><a href="javascript:void(0)"
+                    id="fwin_dialog_cancel" class="dialog-bottom-btn">取消</a>
+            </div>
+        </div>
+        <div id="fwin_dialog_cover"
+            style="position: fixed; z-index: 1700; top: 0px; left: 0px; width: 100%; height: 1511px; opacity: 1;"></div>
+    </div>
+    <!-- 删除商品提示框结束 -->
+
     <!-- 主体部分开始 -->
 
     <div class="car-info-form clearfix">
@@ -137,7 +156,7 @@
             <!-- 商品列表开始 -->
             <div class="car-item-ls" id="cart_item_11624922">
                 <!--商品块1-->
-                <div class="car-item-deal">
+                <div class="car-item-deal" style="display: none">
                     <div class="car-check-box">
                         <input type="checkbox" id="cart_id_checkbok_11624922" goods_value="2499"
                             nc_type="eachGoodsCheckBox" value="11624922|1" name="cart_id[]" cart_value="11624922">
@@ -157,14 +176,12 @@
 
                         <!--购买商品详情-->
                         <div class="car-deal-sp clearfix">
-                            <a href="http://cn.changhong.com/cpzx/pb_televisions/4kcgq/201801/t20180130_68427.html"
-                                title="55D6P 55英寸32核人工智能全面屏4K超高清HDR全金属超薄语音平板LED液晶电视机（星空灰）" class="car-deal-pc">
+                            <a href="#" title="55D6P 55英寸32核人工智能全面屏4K超高清HDR全金属超薄语音平板LED液晶电视机（星空灰）" class="car-deal-pc">
                                 <img src="http://cn.changhong.com/cpzx/pb_televisions/4kcgq/201801/W020181024545320125460.jpg"
                                     width="60px" height="60px" alt="55D6P 55英寸32核人工智能全面屏4K超高清HDR全金属超薄语音平板LED液晶电视机（星空灰）">
                             </a>
-                            <div class="car-deal-name ">
-                                <a href="http://cn.changhong.com/cpzx/pb_televisions/4kcgq/201801/t20180130_68427.html"
-                                    class="h3">55D6P 55英寸32核人工智能全面屏4K超高清HDR全金属超薄语音平板LED液晶电视机（星空灰）</a>
+                            <div class="car-deal-name">
+                                <a href="#" class="h3">55D6P 55英寸32核人工智能全面屏4K超高清HDR全金属超薄语音平板LED液晶电视机（星空灰）</a>
                             </div>
                             <div class="car-deal-price">
                                 <p class="del-price"></p>
@@ -354,7 +371,7 @@
     </div>
     <script src="script/thirdplugins/jquery.min.js"></script>
     <script src="script/thirdplugins/jquery.cookie.js"></script>
-    <script src="script/js/cart.js"></script>
+    <script src="script/js/cart2.js"></script>
 </body>
 
 </html>

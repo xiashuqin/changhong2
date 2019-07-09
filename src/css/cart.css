@@ -17,6 +17,118 @@
 
 /*  支付流程跟踪导航结束 */
 
+/* 删除开始 */
+#append_parent{
+    display: none;
+}
+.dialog_wrapper {
+	background-color: rgba(130, 130, 130, 0.25);
+	border-radius: 4px;
+	padding: 4px;
+	box-shadow: 0 0 12px rgba(0,0,0,0.75)
+}
+.dialog_body { background: #fff; border: solid 1px #CCC;}
+.dialog_head { margin: 0; border-bottom: solid 1px #EEE; position: relative; z-index: auto;}
+.dialog_title { background-color: #FFF; display: inline-block; height: 20px; padding: 10px 20px; border: none 0;}
+.dialog_title_icon { font-size: 14px; line-height: 20px; font-weight: bold; color: #555; }
+.dialog_close_button { font-family: Verdana; font-size: 14px; line-height: 20px; font-weight: lighter; color: #999; text-align: center; display: block; width: 20px; height: 20px; position: absolute; z-index: 1; top: 10px; right: 10px; cursor: pointer;}
+.dialog_close_button:hover { text-decoration: none; color: #27A9E3;}
+
+
+.dialog_loading {
+	text-align: center;
+}
+.dialog_loading_text {
+	padding: 0px;
+	padding-top: 20px;
+	padding-left: 10px;
+	width: 199px;
+	font-style: italic;
+	margin: 15px auto 5px auto;
+	text-align: left;
+	font-size: 15px;
+	background: transparent url(images/loading.gif) no-repeat center top;
+}
+.dialog_message_body { margin: 15px 5px 5px 5px;}
+.dialog_message_contents { font-size: 14px; line-height: 24px; text-align: center; min-width: 360px; padding: 30px 20px;}
+.dialog_message_contents i { display: inline-block; vertical-align: middle; width: 34px; height: 34px; margin-right: 8px;}
+.dialog_message_contents i.alert_info { background: transparent url(../img/info.gif) no-repeat 0 0;}
+.dialog_message_contents i.alert_right { background: transparent url(images/right.gif) no-repeat 0 0;}
+.dialog_message_contents i.alert_error { background: transparent url(images/error.gif) no-repeat 0 0;}
+.dialog_message_confirm { background: transparent url(images/message_confirm.gif) no-repeat left top;}
+.dialog_buttons_bar { text-align: center; padding: 10px 0; margin: 0; border-top: solid 1px #EEE;}
+.dialog_buttons_bar input {
+	margin: 0px 5px;
+}
+time.countdown { color: #999; margin: 10px auto;}
+time.countdown i { font-size: 14px; margin-right: 4px;}
+
+.dialog_buttons_bar .btn1 {
+	width: 75px;
+	height: 29px;
+	border: 0;
+	background: url(images/btn1.gif);
+	color: #c73702;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+.dialog_buttons_bar .btn2 {
+	width: 75px;
+	height: 29px;
+	border: 0;
+	background: url(images/btn2.gif);
+	color: #4e4e4e;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+.dialog_has_title {
+	background: #555;
+}
+.dialog_has_title .dialog_body {
+	background: #fff;
+	bottom: 3px;
+	right: 3px;
+	padding: 10px;
+	border: 4px solid #D7DCE1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+.dialog_has_title .dialog_head {
+	height: 30px;
+	border-bottom: 1px solid #F1F3FA;
+}
+#ui-datepicker-div {
+	z-index: 10000;
+	height: auto;
+}
+a.dialog-bottom-btn { font-size: 12px; margin-left: 10px; font-weight: normal; line-height: 20px; color: #777; background-color: #F5F5F5; text-align: center; display: inline-block; height: 20px; padding: 4px 12px; border: solid 1px; border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC; cursor: pointer;}
+a:hover.dialog-bottom-btn { text-decoration: none; color: #333; background-color: #E6E6E6; border-color: #CFCFCF #CFCFCF #B3B3B3 #CFCFCF;}
+a.dialog-bottom-btn-acidblue, a:hover.dialog-bottom-btn-acidblue { color: #FFF; text-shadow: 0 -1px 0 rgba(0,0,0,0.10);}
+a.dialog-bottom-btn-acidblue { background-color: #49AFCD; border-color: #429DB8 #429DB8 #37839A #429DB8;}
+a:hover.dialog-bottom-btn-acidblue { background-color: #2F96B4; border-color: #2A87A2 #2A87A2 #237087 #2A87A2;}
+
+/* 新改样式 */
+#fwin_dialog{margin-top: -100px;}
+.dialog_body{ border:none;}
+.dialog_buttons_bar{padding: 15px 0 30px;}
+.dialog_title{font-weight: 100;padding: 15px 20px;}
+.dialog_title_icon{font-size: 20px; color:#666; font-weight: 100;}
+.dialog_head{border:none;text-align: center;}
+.dialog_buttons_bar{border:none;}
+.dialog_close_button{font-size: 20px;color:#ddd;}
+.dialog_message_contents{font-size: 16px;color:#666;}
+a.dialog-bottom-btn{border:none; background: #EF262B;width: 60px;height: 25px;line-height: 25px; color:#fff; font-size: 15px;outline: none;font-family: "Microsoft Yahei",Heiti, arial,helvetica,sans-serif !important;}
+a:hover.dialog-bottom-btn{background: #FC3E41 ; color:#fff;}
+
+#fwin_dialog_cover
+{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* 删除结束 */
+
 .car-main-container{background: #f7f7f7;overflow: hidden;}
 .car-con-top{padding-top: 5px;font-size: 14px;color: #333;line-height: 66px;}
 .car-con-top p.car-lf-sp{float: left;margin-left: 5px;}
@@ -27,7 +139,7 @@
 .car-item-deal{background: #fff;margin-bottom:10px;overflow: hidden;}
 .car-check-box{cursor:pointer;float: left;width:14px;height: 14px;margin:72px 0 0 16px;background: url("../img/pro-sel-bac01.png") no-repeat;}
 .car-check-box input{float: left;width:14px;height: 14px;opacity: 0;filter:alpha(opacity=0);cursor: pointer;}
-.car-checked{background: url(../img/pro-sel-bac01.png) no-repeat!important;}
+.car-checked{background: url(../img/pro-sel-bac02.png) no-repeat!important;}
 .car-deal-rt{margin-left: 50px;border-left: 1px solid #f7f7f7;}
 .car-deal-top{border-bottom: 1px solid #f7f7f7;height: 42px;line-height: 42px;font-size: 14px;color: #666666;}
 .car-sp-lf{float: left;}

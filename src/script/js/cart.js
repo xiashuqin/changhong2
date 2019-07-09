@@ -1,4 +1,6 @@
 ; !function ($) {
+
+    //1.渲染购物车列表
     const $bigbox = $('#cart_item_11624922');
     $.ajax({
         url: 'http://10.31.158.38/changhong2/php/index1.php',
@@ -8,6 +10,7 @@
         if ($.cookie('cookiesid') && $.cookie('cookienum')) {//如果存在cookie，取出cookie值
             let sidarr = $.cookie('cookiesid').split(','); //cookie商品的sid  
             let numarr = $.cookie('cookienum').split(','); //cookie商品的num
+            const $number = $('#input_item_11624922');//加加减减里面的商品数量
             $.each(sidarr, function (index1, value1) {
                 $.each(piclist, function (index2, value2) {
                     if (piclist[index2].picid == sidarr[index1]) {
@@ -67,6 +70,8 @@
                     </div>
 
                         `
+                        // $number.val(numarr[index1]);
+                        // console.log($number.val());
                     }
                 })
             });
