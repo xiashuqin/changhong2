@@ -1,0 +1,32 @@
+{
+  "name": "changhong2",
+  "version": "1.0.0",
+  "description": "这就是个长虹的项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiashuqin/changhong2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiashuqin/changhong2/issues"
+  },
+  "homepage": "https://github.com/xiashuqin/changhong2#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
