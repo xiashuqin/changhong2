@@ -23,6 +23,8 @@
                         $clonebox.find('.car-quantity-form').find('input').val(numarr[index1]);
                         $clonebox.css('display', 'block');
                         $bigbox.append($clonebox);
+                        var $allnum = $('#total_num');//全选几件商品
+                        $allnum.html(sidarr.length);
                     }
                 })
             });
@@ -30,8 +32,7 @@
 
     });
 
-
-    //2.改变商品的数量(还没有删除和增加cookie值)
+    //2.改变商品的数量
     //增加商品数量
     const $increment = $('.increment');//加号
     $increment.click(function () {
@@ -42,6 +43,7 @@
         }
         $(this).parents('.car-item-deal').find('.car-quantity-form input').val($count);
         setcookie($(this));
+        priceall();
     });
 
     //减少商品数量
@@ -54,23 +56,39 @@
         }
         $(this).parents('.car-item-deal').find('.car-quantity-form input').val($count);
         setcookie($(this));
+        priceall();
     });
 
 
     //3.全选
+
+    const $goods_num = $('#goods_num');//已选几件商品
     const $chooseall = $('.car-all-check');
     const $choosebox = $('.car-item-deal').find('.car-check-box');
     $chooseall.on('click', function () {
-        //console.log($chooseall.prop('checked'));
-        if ($(this).find('input').prop('checked')) {
-            $(this).addClass('car-checked');
-            //点击全选时，选上所有商品
-            console.log($choosebox.find('input'));//找不到动态添加的元素
-
+        //找到可见的复选框input
+        var $newcheckbox = $('.car-item-deal:visible').find('.car-check-box').find('input');
+        if ($chooseall.find('input').prop('checked')) {//点击全选时，选上所有商品
+            $chooseall.addClass('car-checked');//全选框自己勾上
+            $newcheckbox.parents('.car-check-box').addClass('car-checked');
         } else {
-            $(this).removeClass('car-checked');
+            $chooseall.removeClass('car-checked');
+            $newcheckbox.parents('.car-check-box').removeClass('car-checked');
         }
 
+        //如果商品复选框外面的盒子有√,让复选框checked
+        if ($newcheckbox.parents('.car-check-box').hasClass('car-checked')) {
+            $newcheckbox.prop('checked', true);
+        } else {
+            $newcheckbox.prop('checked', false);
+        }
+        $goods_num.html($('.car-item-deal:visible').find('.car-check-box').find('input:checked').size());
+        priceall();
+
+        //如果全选按钮没有被√上,则总价为0
+        if (!$chooseall.find('input').prop('checked')) {
+            $('#cartTotal').html(0);
+        }
     });
 
     //商品单选
@@ -82,7 +100,37 @@
             $(this).removeClass('car-checked');
         }
 
+        //如果有一个商品没有选中，全选框去掉√
+        var $newcheckbox = $('.car-item-deal:visible').find('.car-check-box').find('input');
+        if (($('.car-item-deal:visible').find('.car-check-box').find('input:checked')).size() < $newcheckbox.size()) {
+            $chooseall.removeClass('car-checked');
+
+        } else {
+            $chooseall.addClass('car-checked');
+        }
+        priceall();
+        $goods_num.html($('.car-item-deal:visible').find('.car-check-box').find('input:checked').size());
+
+        //如果一件商品都没有选中，则总价为0
+        if ($goods_num.html() == 0) {
+            $('#cartTotal').html(0);
+        }
     });
+
+
+    //计算总价格
+    function priceall() {
+        var $sum = 0;
+        var $count = 0;
+        $('.car-item-deal:visible').each(function (index, element) {
+            if ($(element).find('.car-check-box').find('input').prop('checked')) {
+                $sum += parseInt($(element).find('.car-quantity-form input').val()) * parseInt($(element).find('#item11624922_price').html());
+                $('#cartTotal').html($sum);
+            }
+            //console.log($(element).find('.car-check-box').find('input').prop('checked'));
+        });
+
+    }
 
 
     //4.删除商品
@@ -120,8 +168,14 @@
             //numarr2[$.inArray($index, sidarr2)] = $(_this).parents('.car-item-deal').find('.car-quantity-form input').val();
             $.cookie('cookiesid', sidarr3.toString(), { expires: 90 });
             $.cookie('cookienum', numarr3.toString(), { expires: 90 });
+
+            var $allnum = $('#total_num');//全选几件商品
+            $allnum.html(sidarr3.length);
+            priceall();
         })
     });
+
+
 
 
     //封装函数
@@ -138,7 +192,6 @@
     function setcookie(obj) { //obj:当前操作的对象
         cookietoarray();//得到数组
         var $index = obj.parents('.car-item-deal').find('.car-deal-sp').find('img').attr('sid');//通过id找数量的位置
-        console.log(obj.parents('.car-item-deal').find('.car-deal-sp').find('img').attr('src'));
         numarr2[$.inArray($index, sidarr2)] = obj.parents('.car-item-deal').find('.car-quantity-form input').val();
         $.cookie('cookienum', numarr2.toString(), { expires: 90 });
     }
