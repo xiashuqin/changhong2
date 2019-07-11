@@ -13,91 +13,8 @@
 <body>
 
     <!-- 头部导航开始 -->
-    <div class="toolbar">
-        <!--这个宽度限制导致右侧内容换行出不来，先注释-->
-        <!--<div class="com-width">-->
-        <div class="toolbar-container">
-            <div class="toolbar-left">
-                <ul>
-                    <li><a href='#' class="cur">长虹官网</a></li>
-                    <li><a href='#' target="_blank">关于长虹</a></li>
-                    <li><a href='#' target="_blank">商务合作</a></li>
-                    <li><a href="#" target="_blank"><img src="img/en_icon.png" />&nbsp;&nbsp;English</a></li>
-                </ul>
-            </div>
-            <div class="toolbar-right">
-                <div class="toolbar-login" id="unLoginDiv">
-                    <a href="javascript:;" id="sso_login">登录</a>
-                    <span>|</span>
-                    <a href="#" target="_blank">注册</a>
-                </div>
-                <div class="toolbar-login" style="display: none" id="hasLoginDiv">
-                    <a href="javascript:;" class="user-account" id="user-account"></a>
-                    <a href="javascript:;" id="sso_logout">退出</a>
-                </div>
-                <div class="toolbar-mytool">
-                    <div class="tool-container tool-shoppingCar-container">
-                        <div class="tool-container-row">
-                            <a href='#' class="tool-myCQ" target="_blank">我的长虹</a>
-                        </div>
-                        <div class="tool-myCQ-tips">
-                            <div class="tool-myCQ-infor">
-                                <img src="img/tool-myCQ-my-photo_03.jpg" alt="" width="60" height="60"
-                                    id="user_image" />
-                                <p class="tool-myCQ-infor-phone"
-                                    style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 5px;">
-                                    <a href="javascript:gotoLogin();" id="login_account">您好请登录</a></p>
-                                <p class="tool-myCQ-infor-setting"><a href="#">账户设置</a>
-                                </p>
-                            </div>
-                            <div class="tool-myCQ-operation">
-                                <a href="#">我的订单</a>
-                                <span>|</span>
-                                <a href="#">我的预约</a>
-                                <div class="tool-myCQ-operation-cut"></div>
-                                <a href="#">家电管家</a>
-                                <span>|</span>
-                                <a href="#">服务记录</a>
-                                <div class="tool-myCQ-operation-cut"></div>
-                                <a href="#">我的积分</a>
-                                <span>|</span>
+    <div class="top">
 
-                                <div class="tool-myCQ-operation-cut"></div>
-                                <a href="#">我的收藏</a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="tool-container tool-shoppingCar-container">
-                        <div class="tool-container-row hcyp-ewm-container">
-                            <a href='#' target="_blank" class="tool-news">虹创有品</a>
-                            <img class="hcyp-ewm-img" src="img/cnhome-hcyp-ewm.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="tool-container tool-shoppingCar-container">
-                        <div class="tool-container-row">
-                            <a href="#" class="tool-shoppingCar"><span id="mycartNum"
-                                    style="display:none;"></span>购物车</a>
-                        </div>
-                        <div class="tool-container-tips">
-                            <div class="tool-container-tips-warp">
-                            </div>
-                            <div class="tool-goods-pay" style="display: none">
-                                <div class="tool-car-infor">
-                                    <p><span id="totalNum">0</span>件商品</p>
-                                    <h1>总价：<span id="totalPrice"></span></h1>
-                                </div>
-                                <a href="javascript:;" class="goods-pay-btn" id="goods-pay-btn">立即结算</a>
-                            </div>
-                            <h1 class="tips-nogoods" style="display:none">
-                                购物车中还没有商品，赶紧选购吧
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- 头部导航结束 -->
 
@@ -113,7 +30,7 @@
     <!-- 头部LOGO部分结束 -->
 
     <!-- 注册部分开始 -->
-    <form action="http://localhost/changhong2/php/registor.php" method="post" class="register_form" name="my_form">
+    <form action="http://10.31.158.38/changhong2/php/registor.php" method="post" class="register_form" name="my_form">
         <div class="new-register-main" style="width: 350px;">
             <input name="livemode" type="hidden" value="1">
             <input name="ecKey" type="hidden" value="">
@@ -160,7 +77,7 @@
                         href="#">隐私保护</a> 条款</p>
                 <span id="checkbox-tips" style="width:350px;clear: both;">请阅读并接受 版权声明 和 隐私保护 条款</span>
             </div>
-            <input type="submit" class="new-login-singIn new-register-btn" value="注册" />
+            <input type="submit" class="new-login-singIn new-register-btn" value="注册" name="submit" />
             <p class="new-registerTo-login"><a href="login.html">已有账号，马上登录</a>
             </p>
         </div>

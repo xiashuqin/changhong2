@@ -1,4 +1,7 @@
 ; !function ($) {
+
+    $('.top').load('index1.html .toolbar');
+
     const $telp = $(".telp");
     const $telnum = $(".telnum");//手机号码的输入框
     const $telzi = $('.telzi');//手机号码下面的错误提示
@@ -32,6 +35,7 @@
                         $telzi.show();
                         $telsuccess.hide();
                         $telzi.html('该手机号已被注册过');
+                        $tel = false;
                     } else if (d == '0') {
                         $telsuccess.show();
                         $telzi.hide();

@@ -1,4 +1,13 @@
 ; !function ($) {
+    $('.top').load('index1.html .toolbar');
+    $('.lastfooter').load('index1.html .footer', function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn"//图片显示方式
+        });
+        $('img.lazy-nav').lazyload({
+            effect: "fadeIn"
+        })
+    });
 
     //1.渲染购物车列表
     const $bigbox = $('#cart_item_11624922');

@@ -236,15 +236,16 @@ i{
     box-shadow: 0px 2px 3px 0px #d5d5d5;
 }
 .home-nav-sub{
-    height: 260px;
+    height: 0px;
     background: #ffffff;
     border-top: 1px solid #eeeeee;
     position: absolute;
     top: 100%;
     left: 0px;
     width: 100%;
-    display: none;
-    z-index: 100;
+    /* display: none; */
+	z-index: 100;
+	overflow: hidden;
 }
 .home-sub-title {
     line-height: 229px;
@@ -300,12 +301,10 @@ i{
     background: #eeeeee;
     left: 176px;
 }
-.home-nav-sub{
-	display: none;
-}
-.header-navli ul .hoverli:hover .home-nav-sub{
+
+/* .header-navli ul .hoverli:hover .home-nav-sub{
 display: block;
-}
+} */
 /* 二级导航结束 */
 /* 头部第二个导航nav结束 */
 

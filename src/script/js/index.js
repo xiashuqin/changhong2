@@ -2,36 +2,46 @@
 	const $ulstr = $('.tv-pic-list ul');
 	var $str = "";
 
+	//懒加载图片
+	$("img.lazy").lazyload({
+		effect: "fadeIn"
+	});
+
+	$('img.lazy-nav').lazyload({
+		effect: "fadeIn"
+	})
 	// 主要图片数据(电视系列)
 	$.ajax({
 		url: 'http://10.31.158.38/changhong2/php/index1.php',
 		dataType: 'json'
 	}).done(function (picdata) {
 		$.each(picdata, function (index, value) {
-			// $str += `
-			// 		<li>
-			// 		<a href="details.html?sid=${value.picid}">
-			// 			<img src="${value.url}"
-			// 				alt="">
-			// 		</a>
-			// 		<h3>
-			// 			<a href="details.html?sid=${value.picid}">${value.title}</a>
-			// 		</h3>
-			// 		<p>${value.buchong}</p>
-			// 		<i>￥${value.price}</i>
-			// 	</li>`
-
 			$str += `
 					<li>
 					<a href="http://10.31.158.38/changhong2/src/details.html?sid=${value.picid}">
-						<img src="${value.url}" alt="">
+						<img data-original="${value.url}" alt="测试懒加载图片" width="160" height="160" class="lazy">
 						<h3>${value.title}</h3>
 						<p>${value.buchong}</p>
 						<i>￥${value.price}</i>
 					</a>
-				</li>`
+				</li>`;
 		})
 		$ulstr.html($str);
+		$("img.lazy").lazyload({
+			effect: "fadeIn"//图片显示方式
+		});
+	});
+
+
+	//电视下面的二级导航
+	$('.hoverli').hover(function () {
+		$('.home-nav-sub').stop(true).animate({
+			height: 260
+		})
+	}, function () {
+		$('.home-nav-sub').stop(true).animate({
+			height: 0
+		})
 	})
 }(jQuery);
 

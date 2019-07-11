@@ -1,4 +1,17 @@
 ; !function ($) {
+    $('.headerfirst').load('index1.html .toolbar');
+    $('.headersecond').load('index1.html .header-nav', function () {
+        //电视下面的二级导航
+        $('.hoverli').hover(function () {
+            $('.home-nav-sub').stop(true).animate({
+                height: 260
+            })
+        }, function () {
+            $('.home-nav-sub').stop(true).animate({
+                height: 0
+            })
+        })
+    });
     var $goodsid = location.search.substring(5);
     const $goodsPrice = $('#goodsPrice');//价格
     const $title = $('.pro-ditem-name h2 span');//标题
@@ -18,7 +31,10 @@
         $title.html(d.title);
         $buchong.html(d.buchong);
         $goodsPrice.html('￥' + d.price);
-    })
+    });
+
+
+
 
 }(jQuery);
 

@@ -1,4 +1,16 @@
 ; !function ($) {
+
+    $('.top').load('index1.html .toolbar');//引入头部
+    $('.lastfooter').load('index1.html .footer', function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn"//图片显示方式
+        });
+        $('img.lazy-nav').lazyload({
+            effect: "fadeIn"
+        })
+    });//引入底部
+
+
     var $goodsid = location.search.substring(5);
     const $goodsname = $('#goodsname');//标题
     $.ajax({
