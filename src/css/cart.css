@@ -193,6 +193,20 @@ p.rec-price  span.rec-sp2{color: #eb1a21;}
 }
 /* 全选部分结束 */
 
+/* 购物车为空时开始 */
+#goodsempty{
+	height: 200px;
+	display: none;
+}
+#goodsempty p{
+text-align: center;
+line-height: 200px;
+font-size: 20px;
+}
+#goodsempty p a{
+	color: red;
+}
+/* 购物车为空时结束 */
 
 /* 结算部分开始 */
 

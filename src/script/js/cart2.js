@@ -17,6 +17,7 @@
     }).done(function (piclist) {
         let goodshtml = '';
         if ($.cookie('cookiesid') && $.cookie('cookienum')) {//如果存在cookie，取出cookie值
+            $('#goodsempty').hide();
             let sidarr = $.cookie('cookiesid').split(','); //cookie商品的sid  
             let numarr = $.cookie('cookienum').split(','); //cookie商品的num
             const $number = $('#input_item_11624922');//加加减减里面的商品数量
@@ -37,6 +38,8 @@
                     }
                 })
             });
+        } else {
+            $('#goodsempty').show();
         }
 
     });
@@ -165,10 +168,11 @@
             var sidarr3 = [];
             var numarr3 = [];
             if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+
                 sidarr3 = $.cookie('cookiesid').split(',');//cookie商品的sid  
                 numarr3 = $.cookie('cookienum').split(',');//cookie商品的num
-                console.log(sidarr3);
-                console.log(numarr3);
+                // console.log(sidarr3);
+                // console.log(numarr3);
             }
             var $index = $(_this).parents('.car-item-deal').find('.car-deal-sp').find('img').attr('sid');
             //console.log($(_this).parents('.car-item-deal').find('.car-deal-sp').find('img').attr('src'));
@@ -180,6 +184,11 @@
 
             var $allnum = $('#total_num');//全选几件商品
             $allnum.html(sidarr3.length);
+            if (sidarr3.length == 0) {
+                $('#goodsempty').show();
+            } else {
+                $('#goodsempty').hide();
+            }
             priceall();
         })
     });
@@ -204,6 +213,5 @@
         numarr2[$.inArray($index, sidarr2)] = obj.parents('.car-item-deal').find('.car-quantity-form input').val();
         $.cookie('cookienum', numarr2.toString(), { expires: 90 });
     }
-
 
 }(jQuery)
